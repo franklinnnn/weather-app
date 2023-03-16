@@ -1,0 +1,368 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.container {
+  width: 24rem;
+  background-color: #fff;
+  color: #090e3f;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  border: 6px solid #090e3f;
+  box-shadow: 1rem 1rem 4rem 0 rgba(0, 0, 0, 0.4);
+}
+
+.search-container {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.4rem;
+  border: 4px solid #090e3f;
+}
+.search-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: 0.25s ease;
+}
+.search-container button:hover {
+  scale: 1.2;
+  background-color: #beddfc;
+}
+.search-input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #000;
+}
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+.search-input::placeholder {
+  text-transform: capitalize;
+}
+.search-location-icon {
+  font-size: 1.6rem;
+}
+
+.results-container {
+  transition: 0.3s ease;
+}
+.results {
+  text-transform: capitalize;
+}
+.results-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dbe9ee;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+}
+.results-city > h1 {
+  font-size: 2.2rem;
+}
+.results-local-time {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.results-icon {
+  width: 10rem;
+  margin-top: 0.4rem;
+}
+.results-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.results-temp > div {
+  display: flex;
+}
+.results-temp > div > h1 {
+  font-size: 4.2rem;
+  margin: 0;
+  padding: 0;
+}
+.results-units {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.results-unit {
+  color: gray;
+  border-radius: 50%;
+  transition: 0.25s ease;
+  margin: 0 0.1rem;
+}
+.results-unit:hover {
+  cursor: pointer;
+}
+.results-additional {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+}
+.results-sunrise-sunset {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #dbe9ee;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  margin: 0.6rem 0;
+  font-size: 1.2rem;
+}
+.results-sunrise-sunset img {
+  width: 4rem;
+}
+.results-humidity-wind {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #dbe9ee;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  margin: 0.6rem 0;
+}
+.results-humidity-wind svg {
+  font-size: 2.4rem;
+  margin-right: 0.2rem;
+}
+.results-humidity > div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.humidity {
+  display: flex;
+  font-size: 1.6rem;
+}
+.humidity-value {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.humidity-value > span {
+  font-size: 0.8rem;
+}
+.wind {
+  display: flex;
+  font-size: 1.6rem;
+}
+.wind-value {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.wind-value > span {
+  font-size: 0.8rem;
+}
+.active {
+  color: #090e3f;
+  transition: 0.3s ease;
+  font-size: 1.6rem;
+}
+
+.forecast-container {
+  border-radius: 0.4rem;
+}
+.forecast {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: #dbe9ee;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.forecast img {
+  width: 4rem;
+}
+.forecast h2 {
+  margin: 0;
+}
+.forecast-show {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-transform: capitalize;
+  border: none;
+  width: 100%;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  transition: 0.25s ease;
+}
+.forecast-show > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.forecast-show svg {
+  transition: 0.25s ease;
+}
+.forecast-show:hover {
+  border-bottom: 4px solid #090e3f;
+}
+.forecast-show:hover svg {
+  transform: rotate(180deg);
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.news-container {
+  position: relative;
+  margin: 1rem 0;
+  text-align: left;
+  border-radius: 0.4rem;
+  background-color: #dbe9ee;
+  overflow: hidden;
+}
+.news-container:hover {
+  z-index: 10;
+}
+.news-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+.news-container:hover .news-img {
+  background: #090e3f;
+}
+.news-container:hover img {
+  scale: 1.04;
+  opacity: 0.6;
+}
+.news img {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  transition: 0.25s ease;
+}
+.news a {
+  text-decoration: none;
+  color: #090e3f;
+  font-weight: bold;
+}
+.news-info {
+  padding: 0.4rem;
+}
+.news-source {
+  margin: 0.4rem 0;
+}
+.news-source > span {
+  font-size: 0.7rem;
+  background: lightgray;
+  padding: 0.2rem 0.4rem;
+}
+.news-description {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, display 0.25s ease;
+  position: absolute;
+  padding: 0 0.6rem;
+  height: 100%;
+}
+.news-container:hover .news-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 1;
+  color: #fff;
+  font-size: 1.1rem;
+  z-index: 10;
+}
+
+.about-container {
+  position: relative;
+  display: flex;
+  margin: 6rem 0 1rem 0;
+  bottom: 0;
+  gap: 2rem;
+}
+.about-container a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #090e3f;
+  transition: 0.25s ease;
+}
+.about-container a:hover {
+  scale: 1.04;
+  color: #beddfc;
+}
+
+@media screen and (max-width: 375px) {
+  #root {
+    padding: 0;
+  }
+  .container {
+    max-width: 100%;
+    height: 100%;
+    padding: 0.6rem;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+}
