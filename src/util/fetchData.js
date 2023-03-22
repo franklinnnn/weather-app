@@ -1,5 +1,5 @@
-const WEATHER_API = "0201b80fbc123cb1193e631cd09e071c";
-const NEWS_API = "0ae6397d6fec4709b7b71313b6807a2d";
+const WEATHER_API = import.meta.env.VITE_WEATHER_API;
+const NEWS_API = import.meta.env.VITE_NEWS_API;
 
 export const getCurrentWeatherData = async (city) => {
   const data =

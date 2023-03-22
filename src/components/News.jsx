@@ -13,11 +13,11 @@ const News = ({ news, loading }) => {
       exit={{ opacity: 0 }}
     >
       {news?.map((article) => (
-        <>
+        <div key={article.publishedAt}>
           {loading ? (
             <div className="news-container">loading...</div>
           ) : (
-            <div className="news-container" key={article.publishedAt}>
+            <div className="news-container">
               <a
                 href={article.url}
                 className="news-article"
@@ -48,7 +48,7 @@ const News = ({ news, loading }) => {
               </a>
             </div>
           )}
-        </>
+        </div>
       ))}
     </motion.div>
   );
