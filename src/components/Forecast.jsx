@@ -23,7 +23,7 @@ const Forecast = ({ daysForecast, timezone }) => {
             <div>
               <h2>{dayOfWeek}</h2>
             </div>
-            <div>
+            <div className="forecast-icon">
               <img src={weatherIcon?.icon} alt="" />
             </div>
             <div>
