@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import noImg from "../assets/no-img.png";
 
 const News = ({ news, loading }) => {
-  console.log(news);
+  // console.log(news);
   return (
     <motion.div
       className="news"
+      key="news"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ opacity: 0 }}

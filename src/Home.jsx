@@ -56,6 +56,7 @@ const Home = () => {
   return (
     <motion.div
       className="container"
+      key="container"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.25, type: "spring", stiffness: 50 }}
@@ -68,6 +69,7 @@ const Home = () => {
       <AnimatePresence initial={false}>
         {showResults && (
           <motion.div
+            key="results"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ opacity: 0 }}
