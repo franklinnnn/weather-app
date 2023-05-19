@@ -1,5 +1,5 @@
-- Weather + News app
+# Weather + News app
 
-React
-JSX
-CSS
+- React
+- JSX
+- CSS
